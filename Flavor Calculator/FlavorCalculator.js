@@ -76,10 +76,9 @@ function calculate() {
         
         let flavorsText = '<strong>Ароматизатори:</strong><br>';
         flavors.forEach(flavor => {
-            const volume = totalVolume * flavor.percent / 100;
-            /*const drops = Math.round(volume * 33);
-            flavorsText += `${flavor.name}: ${volume.toFixed(2)} мл (${flavor.percent.toFixed(2)}%) ≈ ${drops} крапель<br>`;
-        });*/
+    const volume = totalVolume * flavor.percent / 100;
+    flavorsText += `${flavor.name}: ${volume.toFixed(2)} мл (${flavor.percent.toFixed(2)}%)<br>`;
+});
         document.getElementById('flavorsResult').innerHTML = flavorsText;
 
         document.getElementById('finalRatio').innerHTML = 
